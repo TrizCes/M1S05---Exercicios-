@@ -11,3 +11,8 @@ console.log(segundoValor);
 const pera = new Fatura(231, 'Pera', 0, 5);
 const terceiroValor = pera.obterValorTotal();
 console.log(terceiroValor);
+
+console.log('Extra : metodo getter');
+console.log(melao.valorTotal);
+console.log(laranja.valorTotal);
+console.log(pera.valorTotal);

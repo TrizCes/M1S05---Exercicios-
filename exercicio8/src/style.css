@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.header{
+  background-color: darkblue;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100vw;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main img{
+  margin-top: 100px;
+}
+
+section{
+  border: 2px solid darkblue;
+  width: 50%;
+  margin: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  color: darkblue;
+  
+}
+
+input, label{
+  margin: 20px 0 auto;
+  font-size: 16px;
+}
+
+section input{
+  border: 2px solid royalblue;
+  border-radius: 15%;
+  width: 80%;
+  text-align: center;
+}
+
+input ::placeholder{
+  color: royalblue
+}
+
+section button{
+  width: 80px;
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid rgb(9, 9, 189);
+  background-color: darkblue;
+  font-weight: bold;
+  font-size: 16px;
+  color: royalblue;
+  border-radius: 15%;
+}
+
+footer{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: royalblue;
+  font-weight: bold;
+  background-color: darkblue;
+}

@@ -4,6 +4,7 @@ export default class Funcionario {
   salario;
 
   constructor(cpf, nomeCompleto, salario) {
+    console.log(Funcionario.validarCPF(cpf)); //extra verificar se cpf é valido
     this.cpf = cpf;
     this.nomeCompleto = nomeCompleto;
     this.salario = salario;
@@ -12,8 +13,8 @@ export default class Funcionario {
     this.salario = this.salario * (percentual / 100 + 1);
   }
 
-  static validarCPF(cpf) {
-    cpf = cpf.replace(/[^\d]+/g, '');
+  static validarCPF(cpfOriginal) {
+    const cpf = cpfOriginal.replace(/[^\d]+/g, '');
 
     if (cpf == '') {
       return false;
@@ -34,31 +35,37 @@ export default class Funcionario {
     ) {
       return false;
     }
-
+    //validar 1º digito
     let add = 0;
+    let rev;
 
-    for (i = 0; i < 9; i++) {
+    for (let i = 0; i < 9; i++) {
       add += parseInt(cpf.charAt(i)) * (10 - i);
-      rev = 11 - (add % 11);
-      if (rev === 10 || rev === 11) rev = 0;
-      if (rev !== parseInt(cpf.charAt(9))) return false;
+    }
+    rev = 11 - (add % 11);
+    if (rev === 10 || rev === 11) {
+      rev = 0;
+    }
+    if (rev !== parseInt(cpf.charAt(9))) {
+      return false;
     }
 
+    //validar 2º digito
     add = 0;
 
-    for (i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       add += parseInt(cpf.charAt(i)) * (11 - i);
-      rev = 11 - (add % 11);
-
-      if (rev === 10 || rev === 11) {
-        rev = 0;
-      }
-
-      if (rev !== parseInt(cpf.charAt(10))) {
-        return false;
-      }
-
-      return true;
     }
+    rev = 11 - (add % 11);
+
+    if (rev === 10 || rev === 11) {
+      rev = 0;
+    }
+
+    if (rev !== parseInt(cpf.charAt(10))) {
+      return false;
+    }
+
+    return true;
   }
 }

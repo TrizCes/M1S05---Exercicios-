@@ -1,7 +1,8 @@
 export default class CalculadoraDeArea {
-  tipo = '';
-  base = 0;
-  altura = 0;
+  tipo;
+  base;
+  altura;
+
   constructor(tipo, base, altura) {
     this.tipo = tipo;
     this.base = base;

@@ -5,9 +5,9 @@ const bAcessar = document.getElementById('Acessar');
 const campoMensagem = document.getElementById('campo-Mensagem');
 
 const usuarios = [
-  new Usuario('Bia', 'bia@gmail.com', '12345'),
-  new Usuario('Nice', 'nini@gmail.com', '23451'),
-  new Usuario('Alex', 'alex@gmail.com', '34512'),
+  new Usuario('Bia', 'bia@gmail.com', '123456'),
+  new Usuario('Nice', 'nini@gmail.com', '234561'),
+  new Usuario('Alex', 'alex@gmail.com', '345612'),
 ];
 
 bAcessar.addEventListener('click', (event) => {

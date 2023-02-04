@@ -14,7 +14,7 @@ const retangA = new CalculadoraDeArea('retangulo', 4, 6);
 const areaRA = retangA.calcular();
 console.log(areaRA);
 console.log('----------');
-const quadA = new CalculadoraDeArea('quadrado', 6, 6);
+const quadA = new CalculadoraDeArea('quadRado', 6, 6);
 const areaQA = quadA.calcular();
 console.log(areaQA); // 36
 console.log('----------');

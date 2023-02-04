@@ -13,8 +13,10 @@ export default class CalculadoraDeArea {
     let calculoArea = 0;
     if (this.tipo.toLowerCase() === 'triangulo') {
       return (calculoArea = (this.base * this.altura) / 2);
-    } else {
+    } else if (this.tipo.toLowerCase() === 'quadrado' || this.tipo.toLowerCase() === 'retangulo') {
       return (calculoArea = this.base * this.altura);
+    } else {
+      return null;
     }
   }
 }

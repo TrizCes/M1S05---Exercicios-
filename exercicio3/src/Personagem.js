@@ -1,4 +1,7 @@
 export default class Personagem {
+  nome;
+  percentualVida;
+
   constructor(nome) {
     this.nome = nome;
     this.percentualVida = 100;

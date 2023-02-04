@@ -2,7 +2,6 @@ export default class Juros {
   capitalInicial;
   taxaAplicada;
   tempo;
-  juros;
 
   constructor(capitalInicial, taxaAplicada, tempo) {
     this.capitalInicial = capitalInicial;
@@ -11,12 +10,18 @@ export default class Juros {
   }
 
   calcularJurosSimples() {
-    this.juros = this.capitalInicial * this.taxaAplicada * this.tempo;
-    return this.juros;
+    const C = this.capitalInicial;
+    const i = this.taxaAplicada;
+    const t = this.tempo;
+    const J = C * i * t; //calcula o juros simples
+    return Math.round(C + J); //responde o montante geral capitalInicial + juros
   }
 
   calcularJurosCompostos() {
-    this.juros = this.capitalInicial * (this.taxaAplicada + 1) * this.tempo;
-    return this.juros;
+    const C = this.capitalInicial;
+    const i = this.taxaAplicada;
+    const t = this.tempo;
+    const M = C * (1 + i) ** t;
+    return Math.round(M);
   }
 }

@@ -10,8 +10,8 @@ const jurosCompostosA = aplicacaoA.calcularJurosCompostos();
 console.log('Juros Compostos:');
 console.log(jurosCompostosA);
 
-const aplicacaoB = new Juros(10000, 0.15, 120);
-console.log('Aplicação A:');
+const aplicacaoB = new Juros(10000, 0.15, 10);
+console.log('Aplicação B:');
 console.log(aplicacaoB);
 const jurosSimplesB = aplicacaoB.calcularJurosSimples();
 console.log('Juros Simples:');

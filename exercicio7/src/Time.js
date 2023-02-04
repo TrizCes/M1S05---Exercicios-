@@ -38,9 +38,7 @@ export default class Time {
       } else if (partida.golsTimeA < partida.golsTimeB) {
         this.derrotas = this.derrotas + 1;
       }
-    }
-
-    if (partida.siglaTimeB === this.sigla) {
+    } else if (partida.siglaTimeB === this.sigla) {
       this.golsMarcados = this.golsMarcados + partida.golsTimeB;
       this.golsSofridos = this.golsSofridos + partida.golsTimeA;
       if (partida.golsTimeA < partida.golsTimeB) {
@@ -50,16 +48,14 @@ export default class Time {
       } else if (partida.golsTimeA > partida.golsTimeB) {
         this.derrotas = this.derrotas + 1;
       }
+    } else {
+      return;
     }
   }
 
   exibirSituacao() {
-    console.log('Time: ' + this.nome);
-    console.log('Sigla: ' + this.sigla);
-    console.log('Vitórias: ' + this.vitorias);
-    console.log('Derrotas: ' + this.derrotas);
-    console.log('Empates: ' + this.empates);
-    console.log('Gols marcados: ' + this.golsMarcados);
-    console.log('Gols sofridos: ' + this.golsSofridos);
+    console.log(`Time: ${this.nome}`);
+    console.log(`Jogos: ${this.numeroDeJogos}`);
+    console.log(`Pontos: ${this.numeroDePontos}`);
   }
 }
